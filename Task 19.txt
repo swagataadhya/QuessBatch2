@@ -1,0 +1,28 @@
+//19. JAVA program to check given number is Armstrong or not.
+
+import java.util.Scanner;
+public class ArmstrongOrNot {
+    public static void main(String[] args) {
+        int number,ams,res=0,p;
+        String mn;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter A Number: ");
+        mn=sc.next();
+        p=mn.length();
+        number=Integer.parseInt(mn);
+        ams=number;
+        while(number>0)
+        {
+            res=(int)Math.pow(number%10,p)+res;
+            number/=10;
+        }
+        if(res==ams)
+        {
+            System.out.print("It Is An Amstrong Number");
+        }
+        else
+        {
+            System.out.print("It Is Not An Amstrong Number");
+        }
+    }
+}

@@ -1,0 +1,26 @@
+//11 Number is Prime or notProg to check given number is prime or not.
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    boolean isprime=true;
+	Scanner scr=new Scanner(System.in);
+	System.out.print("Enter a number: ");
+	int number= scr.nextInt();
+	for(int i=2;i<number;i++){
+	    if(number %i==0){
+	        isprime=false;
+	        break;
+	    }
+	}
+	if(isprime){
+	    System.out.println("This is Prime number!");
+	}
+	else{
+	    System.out.println("This is not a Prime number!");
+	}
+	}
+}
+

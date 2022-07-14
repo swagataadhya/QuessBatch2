@@ -1,0 +1,16 @@
+//14. Program to find all factors of the given number.
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.printf("give a number to calculate factor of that number: ");
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		System.out.println("All factors: ");
+		for(int i=1;i<=n;i++){
+		    if(n%i==0) System.out.print(i+" ");
+		}
+	}
+}

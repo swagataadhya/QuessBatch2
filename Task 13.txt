@@ -1,0 +1,31 @@
+//13. Program to print count of all prime numbers upto given number.
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    boolean isprime=true; int count=0;
+	Scanner scr=new Scanner(System.in);
+
+
+	System.out.print("Enter range: ");
+	int range=scr.nextInt();
+	for(int j=2;j<=range;j++){
+	    for(int i=2;i<j;i++){
+	    if(j %i==0){
+	        isprime=false;
+	        break;
+	    }
+	}
+	if(isprime){
+	   count++;
+	}
+	else{
+	    
+	    isprime=true;
+	}
+	}
+	System.out.println("Total count is "+count);
+	
+	}
+}

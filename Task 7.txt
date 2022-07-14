@@ -1,0 +1,25 @@
+//7. Mr. Lalwani having Some Currency. The currency having number as Palidrome gets 3 times more than the currency. So help out Mr. Lalwani to check which currency going to give him 3 times return.
+
+#include <stdio.h>
+
+int main() {
+    int number,n2=0,temp,currency;
+    printf("Give the currency number: ");
+    scanf("%d",&number);
+    printf("Enter Currency: ");
+    scanf("%d",&currency);
+    temp=number;
+    while(temp>0)
+    {
+        n2=(10*n2)+(temp%10);
+        temp=temp/10;
+    }
+    if(number==n2)
+    {
+        printf("congrats! Lalwani you will get 3x of your currency: %d",(currency*3));
+    }
+    else{
+        printf("sorry Lalwani your currency is not palindrome, so you will get the same ammount: %d",currency);
+    }
+    return 0;
+}

@@ -1,0 +1,21 @@
+//21 Ternary operator taskFind greater between 4 numbers using ternary operators
+
+
+import java.util.Scanner;
+public class LargeNumConditional
+{
+    public static void main(String[] args) {
+        int number1,number2,number3,number4;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter 1st Number: ");
+        number1=sc.nextInt();
+        System.out.print("Enter 2nd Number: ");
+        number2=sc.nextInt();
+        System.out.print("Enter 3rd Number: ");
+        number3=sc.nextInt();
+        System.out.print("Enter 4th Number: ");
+        number4=sc.nextInt();
+        int max=(number1>number2 && number1>number3 && number1>number4?number1:number2>number4 && number2>number4?number2:number3>number4?number3:number4);
+        System.out.print("Greatest Number is: "+max);
+    }
+}

@@ -1,0 +1,33 @@
+//12. Program to print all prime numbers between given range.
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    boolean isprime=true;
+	Scanner scr=new Scanner(System.in);
+
+
+	System.out.print("Enter lower limit: ");
+	int range=scr.nextInt();
+	System.out.print("Enter upper limit: ");
+	int range2=scr.nextInt();
+	
+	for(int j=range;j<=range2;j++){
+	    for(int i=2;i<j;i++){
+	    if(j %i==0){
+	        isprime=false;
+	        break;
+	    }
+	}
+	if(isprime){
+	    System.out.println("number is: "+j);
+	}
+	else{
+	    
+	    isprime=true;
+	}
+	}
+	
+	}
+}

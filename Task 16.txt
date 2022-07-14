@@ -1,0 +1,25 @@
+//16. Program to find all prime factors of given number.
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int number,ans,i=2;
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("Enter a number to calculate prime factor: ");
+	    number=  sc.nextInt();
+	    ans=number;
+	    while(ans!=1)
+	    {
+	        if(ans%i==0)
+	        {
+	            ans=ans/i;
+	            System.out.print(i+" ");
+	        }
+	        else{
+	            i++;
+	        }
+	    }
+	}
+}

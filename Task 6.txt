@@ -1,0 +1,20 @@
+//6. Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string. Note: input will never be an empty string
+
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char data[30];
+    int i;
+    printf("Give a string of digits: ");
+    scanf("%s",data);
+    for(i=0;i<strlen(data);i++)
+    {
+        if(data[i]>='0'&&data[i]<='5')
+        data[i]='0';
+        else if(data[i]>='6'&&data[i]<='9')
+        data[i]='1';
+    }
+    printf("result: %s",data);
+    
+    return 0;
+}

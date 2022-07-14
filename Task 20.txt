@@ -1,0 +1,31 @@
+//20.  JAVA Program to Display Armstrong Number between Two Intervals.
+
+import java.util.Scanner;
+public class ArmstrongInterval {
+    public static void main(String[] args) {
+        int number,ams,res=0,uplm,lolm;
+        int p;
+        Scanner sc=new Scanner(System.in);
+
+        System.out.print("Enter Lower Limit: ");
+        lolm=sc.nextInt();
+        System.out.print("Enter Upper Limit: ");
+        uplm=sc.nextInt();
+        for(int i=lolm;i<=uplm;i++)
+        {
+            p=String.valueOf(i).length();
+            res=0;
+            number=i;
+            ams=i;
+            while(number>0)
+            {
+                res=(int)Math.pow(number%10,p)+res;
+                number/=10;
+            }
+            if(res==ams)
+            {
+                System.out.print(" "+i);
+            }
+        }
+    }
+}
